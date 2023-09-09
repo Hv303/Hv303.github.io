@@ -1,0 +1,219 @@
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: none;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    color: #fff;
+
+
+}
+
+
+.nav-pusat {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.navbar-brand span {
+    color: red;
+
+}
+
+
+
+
+.nav-item {
+
+    list-style-type: none;
+    font-size: 1.2em;
+    margin-right: 11px;
+    /* memberikan jarak kanan antara elemen <li> */
+    color: white
+}
+
+.nav-item:hover {
+    background-color: red;
+    transition: .2s ease-in-out;
+    transition-delay: .3s;
+    border-radius: 5px;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 2000px;
+    color: #fff;
+}
+
+.b {
+    background-color: rgba(1, 1, 3, 1);
+
+}
+
+
+
+
+
+
+
+.navbar-1 {
+    background-color: rgba(23, 22, 22, 0.632);
+}
+
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url(../image/dark-night-sky-stars.jpg);
+
+
+    /* supaya bisa sesuai kan layar / px */
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(1, 1, 3, 1), 10%, rgb(62, 71, 195, 0) 50%);
+}
+
+.hero .text {
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+
+.hero .text h1 {
+    font-size: 4em;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    line-height: 1.2;
+}
+
+.hero .text p {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    mix-blend-mode: difference;
+}
+
+/* tentang area */
+.tentang {
+    padding: 8rem 7% 1.4rem;
+}
+
+.tentang h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+    font-weight: bold;
+
+}
+
+.tentang span {
+    color: rgb(145, 68, 13);
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+    font-weight: bold;
+
+}
+
+.tentang .row {
+    display: flex;
+}
+
+.tentang .row .tentang-img {
+    flex: 1 1 45rem;
+}
+
+.tentang .row .tentang-img img {
+    width: 100%;
+    height: 43rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.tentang .row .contentt {
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+}
+
+.tentang .row .contentt {
+    word-wrap: break-word;
+  overflow-wrap: break-word;
+    padding: 0;
+}
+
+.tentang .row .contentt h3 {
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+
+}
+
+.tentang .row .contentt p {
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+    font-weight: 100;
+     line-height: 1.5;
+}
+/* content area */
+.content h1 {
+    font-family: 'Lilita One', cursive;
+   
+      
+}
+
+
+
+/* Perangkat */
+
+/* laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 70%;
+    }
+}
+
+
+
+
+
+
+
+.tentang .row {
+    flex-wrap: wrap;
+}
+
+/* tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+/* andoid */
+@media (max-width: 450px) {
+    html {
+        font-size: 54%;
+    }
+}

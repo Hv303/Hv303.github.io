@@ -1,0 +1,353 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    color: #fff;
+}
+
+body {
+    /* Panjang Scroll */
+    min-height: 2px;
+}
+
+.b {
+    background-color: #000;
+}
+
+/* navbar */
+.nvr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(1, 1, 1, 0.8);
+    border-bottom: 1px solid #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.nvr .nav-logo {
+    font-family: 'Kanit', sans-serif;
+    font-size: 2rem;
+    font-weight: 70000;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.nvr .nvrr a {
+    font-family: 'Itim', cursive;
+ color: #fff;
+ display: inline-block;
+ font-size: 1.5rem;
+ margin: 0 3rem;
+ text-decoration: none;
+}
+
+.nvr .nvrr a:hover {
+    color: chocolate;
+    
+}
+
+.nvr .nvrr a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid grey;
+    transform: scaleX(0);
+    transition: 0.5s linear;
+}
+
+.nvr .nvrr a:hover::after {
+    transform: scaleX(0.8);
+}
+
+.nvr .nvr-tambahan a{
+    color: #fff;
+    margin: 0 0.5rem; 
+    }
+
+    .navbar .nvr-tambahan a:hover{
+color: chocolate;
+    }
+
+ #menu {
+    display: none;
+ }   
+
+/* logo */
+.nvr-tambahan  img {
+display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+
+/* end */
+
+
+/* content */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url(../gif/2e7392bd69172cb64fb648d6a5abb830.gif);
+
+
+    /* supaya bisa sesuai kan layar / px */
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(1, 1, 3, 1), 10%, rgb(62, 71, 195, 0) 50%);
+}
+
+.hero .text {
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+
+.hero .text h1 {
+    font-size: 4em;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    line-height: 1.2;
+}
+
+.hero .text p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    mix-blend-mode: difference;
+    color: #fff;
+}
+
+.contentpp  {
+    margin-top: 100px;
+  
+}
+
+/* content area */
+.content h1 {
+    font-family: 'Abril Fatface', cursive;
+}
+
+/* bot area */
+.bot {
+    padding: 8rem 7% 1.4rem;
+
+}
+
+.bot h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+    font-weight: bold;
+    /* panding top untuk kasih jarak teks dari atas */
+    padding-top: 50px;
+
+}
+/* apk area */
+.appk {
+      padding: 8rem 7% 1.4rem;
+    
+
+
+}
+
+
+
+/* icons */
+.icons {
+    margin-top: 8px;
+    font-size: 30px;
+    color: var(--icons-bg-primary);
+    /* padding: 100px; */
+ 
+}
+
+/* Button Area */
+.btn-utama  {
+    font-family: 'Merriweather';
+}
+.btn-utama .btn-1 {
+    background-color: #272829;
+   
+    color: #fff;
+    border-radius: 20px;
+    margin-top: 16px;
+    padding: 10px 20px;
+    cursor:pointer;
+    border: none;
+    width: 110px;
+    font-size: 11px;
+}
+
+.btn-1:hover {
+    background-color:#19A7CE;
+    color: #000;
+    transform: rotateY(20deg);
+    transition: .3s ease-in-out;
+}
+.btn-utama .btn-2 {
+    background-color: #272829;
+   
+    color: #fff;
+    border-radius: 20px;
+    margin-top: 16px;
+    margin-left:10px;
+    padding: 10px 20px;
+    cursor:pointer;
+    border: none;
+    width: 110px;
+    font-size: 11px;
+}
+
+.btn-2:hover {
+    background-color:#19A7CE;
+    color: #000;
+    transform: rotateY(20deg);
+    transition: .3s ease-in-out;
+}
+/* End */
+
+/* card */
+.col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row .col .card   {
+  
+    border-radius: 50px;
+}
+ .img-1 .card-img-top {
+    
+    border-radius: 50px;
+}
+
+.card-img-top {
+ 
+height: auto;
+} 
+
+.card-text .text-body-secondary  {
+    color: #fff;
+}
+
+.card-title {
+    font-family: 'Caprasimo', cursive;
+
+    font-size: 20px;
+    
+}
+
+
+.card-text {
+    font-size: 15px;
+}
+
+.card {
+   
+    background-color: #000000;
+    color: #fff;
+   margin-top: 50px;
+
+
+
+ 
+
+
+
+
+   /* box-shadow: rgb(251, 245, 245) 0px 50px 100px -20px, rgb(255, 255, 255) 0px 30px 60px -30px, rgb(238, 238, 238) 0px -2px 6px 0px inset; */
+   /* box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px ; */
+   
+   box-shadow: 	12px 14px 12px -7px rgba(143,  0 ,  255 ,0.38),
+   9px 9px 10px -7px rgba(143,  0 ,  255 ,0.19) inset;
+background-color: rgba(143, 0, 255,0.5);
+border:	1px solid rgba(143,  0,  255, 0.7);
+border-radius:	7px;
+outline:	20px solid rgba(143,  0,  255, 0.33);
+
+
+}
+
+
+/* Perangkat */
+
+/* laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 70%;
+    }
+   
+
+}
+.card-footer {
+font-size: 20px;
+
+text-align: center;
+}
+/* tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 59%;
+    }
+    #menu {
+        display: inline-block;
+    }
+    
+    .nvr .nvrr {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #000;
+        width: 30rem;
+        height: 100vh;
+        transition: 1s;
+    }
+    .nvr .nvrr.active {
+        right: 0;
+    }
+
+    .nvr .nvrr a {
+        color: #fff;
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+
+    .nvr .nvrr a::after {
+        transform-origin: 0 0;
+    }
+    .nvr .nvrr a:hover::after {
+      transform: scaleX(0.2);
+    }
+}
+
+/* andoid */
+@media (max-width: 450px) {
+    html {
+        font-size: 48%;
+    }
+}

@@ -1,0 +1,303 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    color: #fff;
+
+}
+
+:root {
+    --bg-primary: rgb(75, 39, 185);
+    --bg-secondary: rgba(222, 245, 245, 0.71);
+    --txt-primary: #fff;
+    --txt-secondary: #000;
+    --icons-bg-primary: tomato;
+    --icons-bg-secodary: #77777777;
+}
+
+body {
+    background-color: #000;
+    min-height: 3px;
+}
+
+
+/* navbar */
+.nvr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(1, 1, 1, 0.8);
+    border-bottom: 1px solid #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.nvr .nav-logo {
+    font-family: 'Kanit', sans-serif;
+    font-size: 2rem;
+    font-weight: 70000;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.nvr .nvrr a {
+    font-family: 'Itim', cursive;
+    color: #fff;
+    display: inline-block;
+    font-size: 1.5rem;
+    margin: 0 3rem;
+    text-decoration: none;
+}
+
+.nvr .nvrr a:hover {
+    color: chocolate;
+
+}
+
+.nvr .nvrr a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid grey;
+    transform: scaleX(0);
+    transition: 0.5s linear;
+}
+
+.nvr .nvrr a:hover::after {
+    transform: scaleX(0.8);
+}
+
+.nvr .nvr-tambahan a {
+    color: #fff;
+    margin: 0 0.5rem;
+}
+
+.navbar .nvr-tambahan a:hover {
+    color: chocolate;
+}
+
+#menu {
+    display: none;
+}
+
+/* logo */
+.nvr-tambahan img {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+
+/* end */
+
+/* card */
+
+
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Silkscreen', cursive;
+    height: auto;
+    /* background-color: var(--bg-primary); */
+    background-color: #000;
+}
+
+.box {
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    /* Menambahkan margin atas untuk menjauhi navbar */
+}
+
+.card {
+    width: 40%;
+    border: 1px solid #fff;
+
+    background-color: #fff;
+    color: var(--txt-secondary);
+    padding: 32px;
+    margin: 8px;
+
+
+
+
+    /* box-shadow: 2px 2px 2px 2px rgba(0, 0 , 0, 0.5); */
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+
+}
+
+
+.text-p {
+    text-align: center;
+    color: #000;
+}
+
+
+
+
+.title {
+    font-size: 2em;
+    color: #000;
+}
+
+.icons {
+    margin-top: 8px;
+    font-size: 30px;
+    color: var(--icons-bg-primary);
+
+
+}
+
+
+.pp {
+    font-size: 1.5em;
+    margin-top: 8px;
+    color: #000;
+}
+
+.btn {
+    margin-top: 16px;
+    padding: 8px;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    border-radius: 20px;
+    color: #000;
+    font-family: 'Silkscreen', cursive;
+
+}
+
+.btn:hover {
+    background-color: var(--bg-primary);
+    color: var(--txt-primary);
+    -ms-transform: rotate(2deg);
+    transform: rotateY(20deg);
+    transition: .3s ease-in-out;
+    color: #000;
+    font-size: 15px;
+    font-family: 'Silkscreen', cursive;
+
+}
+
+/* end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Perangkat */
+
+/* laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 70%;
+    }
+
+
+}
+
+.card-footer {
+    font-size: 20px;
+
+    text-align: center;
+}
+
+/* tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 59%;
+    }
+
+    #menu {
+        display: inline-block;
+    }
+
+    .nvr .nvrr {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #000;
+        width: 30rem;
+        height: 100vh;
+        transition: 1s;
+    }
+
+    .nvr .nvrr.active {
+        right: 0;
+    }
+
+    .nvr .nvrr a {
+        color: #fff;
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+
+    .nvr .nvrr a::after {
+        transform-origin: 0 0;
+    }
+
+    .nvr .nvrr a:hover::after {
+        transform: scaleX(0.2);
+    }
+}
+
+/* andoid */
+@media (max-width: 450px) {
+    html {
+        font-size: 48%;
+    }
+}
+
+
+@media screen and (max-width: 476px) {
+    .card {
+        width: 95%;
+
+    }
+
+    .title {
+        font-size: 3em;
+    }
+
+    .btn {
+        padding: 10px;
+        font-size: 2em;
+    }
+
+    .icons {
+        font-size: 10em;
+    }
+
+    .pp {
+        font-size: 2.5em;
+    }
+}

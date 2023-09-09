@@ -1,0 +1,388 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+
+
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root {
+
+    /*========== Colors ==========*/
+    --body-color: #020318;
+    --text-color-light: #FFF;
+
+    /*========== Font and typography ==========*/
+    --body-font: 'Poppins', sans-serif;
+    --biggest-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --normal-font-size: .938rem;
+    --smaller-font-size: .75rem;
+
+    /*========== Box, Drop & Text Shadow ==========*/
+    --box-shadow-inset: inset 0 22px 56px -36px rgba(255, 255, 255, .5), 
+                        inset 0 4px 5px -4px rgba(255, 255, 255, 1), 
+                        inset 0 -31px 34px -32px rgba(96, 68, 144, .3), 
+                        inset 0 39px 50px -34px rgba(202, 172, 255, .3), 
+                        inset 0 2px 9px rgba(154, 146, 210, .3), 
+                        inset 0 1px 10px rgba(227, 222, 255, .2);
+
+    --drop-shadow: 0 0 8px rgba(161, 165, 247, .8);
+
+    --text-shadow: 0 0 8px rgba(161, 165, 247, .8);
+
+    --box-shadow-inset-button: inset 0 2px 7px -9px rgba(255, 255, 255, .5), 
+                               inset 0 1px 2px -1px rgba(255, 255, 255, 1), 
+                               inset 0 -20px 16px -32px rgba(96, 68, 144, .3), 
+                               inset 0 28px 25px -24px rgba(202, 172, 255, .3), 
+                               inset 0 1px 4px rgba(154, 146, 210, .3), 
+                               inset 0 1px 10px rgba(227, 222, 255, .2);
+
+    /*========== Box, Drop & Text Shadow Hover ==========*/
+    --box-shadow-inset-hover: inset 0 19px 28px -18px rgba(255, 255, 255, .5), 
+                              inset 0 4px 6px -3px rgba(255, 255, 255, 1), 
+                              inset 0 -51px 44px -42px rgba(96, 68, 144, .3), 
+                              inset 0 59px 60px -32px rgba(202, 172, 255, .3), 
+                              inset 0 4px 16px rgba(154, 146, 210, .3), 
+                              inset 0 2px 25px rgba(227, 222, 255, .23);
+
+    --drop-shadow-hover:  0 0 14px rgba(161, 165, 247, .8);
+
+    --text-shadow-hover: 0 0 14px rgba(161, 165, 247, .8);
+
+    --box-shadow-inset-button-hover: inset 0 4px 7px -4px rgba(255, 255, 255, .5), 
+                                     inset 0 1px 2px -1px rgba(255, 255, 255, 1), 
+                                     inset 0 -20px 16px -32px rgba(96, 68, 144, .3), 
+                                     inset 0 28px 25px -20px rgba(202, 172, 255, .3), 
+                                     inset 0 1px 4px rgba(154, 146, 210, .3), 
+                                     inset 0 1px 16px rgba(227, 222, 255, .2);
+                                     
+    /*========== Filter Blur ==========*/
+    --filter-blur: blur(100px);
+}
+
+@media screen and (min-width: 1024px) {
+
+    :root {
+        --normal-font-size: 1rem;
+    }
+}
+
+/*========== BASE ==========*/
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    min-height: 800px;
+}
+
+/* navbar */
+.nvr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(1, 1, 1, 0.8);
+    border-bottom: 1px solid #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.nvr .nav-logo {
+    font-family: 'Kanit', sans-serif;
+    font-size: 2rem;
+    font-weight: 70000;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.nvr .nvrr a {
+    font-family: 'Itim', cursive;
+ color: #fff;
+ display: inline-block;
+ font-size: 1.5rem;
+ margin: 0 3rem;
+ text-decoration: none;
+}
+
+.nvr .nvrr a:hover {
+    color: chocolate;
+    
+}
+
+.nvr .nvrr a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid grey;
+    transform: scaleX(0);
+    transition: 0.5s linear;
+}
+
+.nvr .nvrr a:hover::after {
+    transform: scaleX(0.8);
+}
+
+.nvr .nvr-tambahan a{
+    color: #fff;
+    margin: 0 0.5rem; 
+    }
+
+    .navbar .nvr-tambahan a:hover{
+color: chocolate;
+    }
+
+ #menu {
+    display: none;
+ }   
+
+/* logo */
+.nvr-tambahan  img {
+display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+
+/* end */
+
+h1, p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*========== LAYAOUT ==========*/
+.bd-container {
+    max-width: 1024px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+/*========== CARD NEON ==========*/
+.neon,
+.neon__container{
+    display: grid;
+    align-items: center;
+}
+
+.neon {
+    padding: 2.5rem 0;
+}
+
+.neon__container {
+    grid-template-columns: repeat(auto-fit, minmax(312px, 1fr));
+    row-gap: 3.5rem;
+    column-gap: 2.5rem;
+}
+
+.neon__card {
+    background: rgba(255, 255, 255, 0.01);
+    color: var(--text-color-light);
+    box-shadow: var(--box-shadow-inset);
+    backdrop-filter: var(--filter-blur);
+    padding: 3.5rem 1.5rem 2rem;
+    border-radius: 3rem;
+    text-align: center;
+
+}
+
+.neon__icon {
+    width: 120px;
+    fill: var(--text-color-light);
+    filter: drop-shadow(var(--drop-shadow));
+    margin-bottom: .25rem;
+}
+
+.neon__title, .neon__description {
+    text-shadow: var(--text-shadow);  
+}
+
+.neon__title {
+    font-size: var(--biggest-font-size);
+    font-size: 30px;
+    margin-bottom: .25rem;
+
+}
+
+.neon__description {
+    text-align: initial;
+    margin-bottom: 1.5rem;
+    font-size: 14px;
+}
+
+.neon__button-icon {
+    width: 1.2rem;
+    margin-left: .5rem;
+    fill: var(--text-color-light);
+    filter: drop-shadow(var(--drop-shadow));
+}
+
+.neon__button {
+    box-shadow: var(--box-shadow-inset-button);
+    color: var(--text-color-light);
+    text-shadow: var(--text-shadow);
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem;
+    border-radius: 1rem;
+    font-size: 15px;
+}
+
+.neon__button:hover {
+    box-shadow: var(--box-shadow-inset-button-hover);
+}
+
+/* Card neon hover */
+.neon__card:hover {
+    box-shadow: var(--box-shadow-inset-hover);
+}
+
+.neon__card:hover .neon__icon {
+    filter: drop-shadow(var(--drop-shadow-hover));
+}
+
+.neon__card:hover .neon__title,
+.neon__card:hover .neon__description {
+    text-shadow: var(--text-shadow-hover);
+}
+
+.neon__card, 
+.neon__icon, 
+.neon__title, 
+.neon__description, 
+.neon__button {
+    transition: .3s;
+}
+
+/*========== MEDIA QUERIES ==========*/
+/* andro */
+@media (max-width: 768px) {
+    .neon__card {
+        margin-top: 50px; /* Sesuaikan dengan tinggi navbar pada tampilan ponsel */
+    }
+}
+
+/* For small devices */
+@media screen and (max-width: 359px) {
+    .neon__container {
+        grid-template-columns: 1fr;
+    }
+    .neon__card {
+        padding: 2rem 1rem 1.5rem;
+        border-radius: 2rem;
+    }
+    .neon__icon {
+        width: 80px;
+    }
+    .neon__title {
+        font-size: var(--h1-font-size);
+    }
+    .neon__description {
+        font-size: var(--smaller-font-size);
+    }
+    .neon__button {
+        padding: 1rem;
+        font-size: var(--smaller-font-size);
+        border-radius: .6rem;
+    }
+    .neon__button-icon {
+        width: 1rem;
+    }
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    z-index: 999; /* Pastikan footer berada di atas konten lainnya */
+    font-size: 15px;
+}
+
+/* For long screens */
+@media screen and (min-width: 1024px) {
+    .bd-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .neon {
+        height: 100vh;
+    }
+}
+
+
+/* Perangkat */
+
+/* laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 70%;
+    }
+   
+
+}
+
+/* tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 59%;
+    }
+    #menu {
+        display: inline-block;
+    }
+    
+    .nvr .nvrr {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #000;
+        width: 30rem;
+        height: 100vh;
+        transition: 1s;
+    }
+    .nvr .nvrr.active {
+        right: 0;
+    }
+
+    .nvr .nvrr a {
+        color: #fff;
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+
+    .nvr .nvrr a::after {
+        transform-origin: 0 0;
+    }
+    .nvr .nvrr a:hover::after {
+      transform: scaleX(0.2);
+    }
+}
+
+/* andoid */
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}

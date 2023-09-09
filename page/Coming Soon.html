@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Coming Soon</title>
+    <style>
+       * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            flex-direction: column; /* Tambahkan ini */
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            color: #333;
+            position: relative;
+            animation: fadeInUp 1.5s ease-in-out infinite;
+        }
+
+        @keyframes fadeInUp {
+            0%, 100% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 1.5rem;
+            }
+        }
+
+        button {
+            margin-top: 20px; /* Tambahkan ini */
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Coming Soon</h1>
+    </div>
+
+    <button id="kembaliBtn">Kembali</button>
+
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    const kembali = document.getElementById('kembaliBtn');
+    
+    kembali.addEventListener('click', function() {
+        window.location.href = '../page/contact.html';
+    });
+});
+
+    </script>
+</body>
+</html>
